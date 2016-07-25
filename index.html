@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js canvas - panorama demo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: rgb(200,200,200);
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+		<script src="js/three.js"></script>
+		<script src="js/panorama.js"></script>
+		
+		<script>
+
+				var textures = [
+
+					'textures/cube/skybox/px.jpg', // right
+					'textures/cube/skybox/nx.jpg', // left
+					'textures/cube/skybox/py.jpg', // top
+					'textures/cube/skybox/ny.jpg', // bottom
+					'textures/cube/skybox/pz.jpg', // back
+					'textures/cube/skybox/nz.jpg'  // front
+
+				];
+
+				var panorama = new Panorama({textures:textures});
+		</script>
+	</body>
+</html>
